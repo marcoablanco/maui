@@ -39,6 +39,11 @@ namespace Microsoft.Maui.Handlers
 			handler.PlatformView?.UpdateTextColor(button);
 		}
 
+		public static void MapTextAlignment(IButtonHandler handler, ITextAlignment button)
+		{
+			handler.PlatformView?.UpdateTextAlignment(button);
+		}
+
 		public static void MapImageSource(IButtonHandler handler, IImage image) =>
 			MapImageSourceAsync(handler, image).FireAndForget(handler);
 

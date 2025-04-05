@@ -15,7 +15,7 @@ namespace Microsoft.Maui.Controls
 	/// A button <see cref="View" /> that reacts to touch events.
 	/// </summary>
 	[DebuggerDisplay("{GetDebuggerDisplay(), nq}")]
-	public partial class Button : View, IFontElement, ITextElement, IBorderElement, IButtonController, IElementConfiguration<Button>, IPaddingElement, IImageController, IViewController, IButtonElement, ICommandElement, IImageElement, IButton, ITextButton, IImageButton
+	public partial class Button : View, IFontElement, ITextElement, ITextAlignment, IBorderElement, IButtonController, IElementConfiguration<Button>, IPaddingElement, IImageController, IViewController, IButtonElement, ICommandElement, IImageElement, IButton, ITextButton, IImageButton
 	{
 		const double DefaultSpacing = 10;
 
@@ -72,6 +72,16 @@ namespace Microsoft.Maui.Controls
 		/// The backing store for the <see cref="FontAttributes" /> bindable property.
 		/// </summary>
 		public static readonly BindableProperty FontAttributesProperty = FontElement.FontAttributesProperty;
+
+		/// <summary
+		/// >Bindable property for <see cref="HorizontalTextAlignment"/>.
+		/// </summary>
+		public static readonly BindableProperty HorizontalTextAlignmentProperty = TextAlignmentElement.HorizontalTextAlignmentProperty;
+
+		/// <summary>
+		/// Bindable property for <see cref="VerticalTextAlignment"/>.
+		/// </summary>
+		public static readonly BindableProperty VerticalTextAlignmentProperty = TextAlignmentElement.VerticalTextAlignmentProperty;
 
 		/// <summary>
 		/// The backing store for the <see cref="FontAutoScalingEnabled" /> bindable property.
@@ -290,6 +300,24 @@ namespace Microsoft.Maui.Controls
 		{
 			get { return (FontAttributes)GetValue(FontAttributesProperty); }
 			set { SetValue(FontAttributesProperty, value); }
+		}
+
+		/// <summary>
+		/// Gets or sets the vertical text alignment of the button. This is a bindable property.
+		/// </summary>
+		public TextAlignment HorizontalTextAlignment
+		{
+			get { return (TextAlignment)GetValue(HorizontalTextAlignmentProperty); }
+			set { SetValue(HorizontalTextAlignmentProperty, value); }
+		}
+
+		/// <summary>
+		/// Gets or sets the vertical text alignment of the button. This is a bindable property.
+		/// </summary>
+		public TextAlignment VerticalTextAlignment
+		{
+			get { return (TextAlignment)GetValue(VerticalTextAlignmentProperty); }
+			set { SetValue(VerticalTextAlignmentProperty, value); }
 		}
 
 		/// <summary>

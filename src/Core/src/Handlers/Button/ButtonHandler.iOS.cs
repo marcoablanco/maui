@@ -118,6 +118,11 @@ namespace Microsoft.Maui.Handlers
 			}
 		}
 
+		public static void MapTextAlignment(IButtonHandler handler, ITextAlignment button)
+		{
+			handler.PlatformView?.UpdateTextAlignment(button);
+		}
+
 		public static void MapCharacterSpacing(IButtonHandler handler, ITextStyle button)
 		{
 			handler.PlatformView?.UpdateCharacterSpacing(button);

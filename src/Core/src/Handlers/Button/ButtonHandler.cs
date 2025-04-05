@@ -1,3 +1,4 @@
+using Microsoft.Maui.Core;
 using System;
 #if __IOS__ || MACCATALYST
 using PlatformView = UIKit.UIButton;
@@ -31,6 +32,12 @@ namespace Microsoft.Maui.Handlers
 			[nameof(ITextStyle.Font)] = MapFont,
 			[nameof(ITextStyle.TextColor)] = MapTextColor,
 			[nameof(IText.Text)] = MapText
+		};
+
+		public static IPropertyMapper<ITextAlignmentButton, IButtonHandler> TextAlignmentMapper = new PropertyMapper<ITextAlignmentButton, IButtonHandler>()
+		{
+			[nameof(ITextAlignmentButton.HorizontalTextAlignment)] = MapTextAlignment,
+			[nameof(ITextAlignmentButton.VerticalTextAlignment)] = MapTextAlignment
 		};
 
 		public static IPropertyMapper<IButton, IButtonHandler> Mapper = new PropertyMapper<IButton, IButtonHandler>(TextButtonMapper, ImageButtonMapper, ViewHandler.ViewMapper)

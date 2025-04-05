@@ -11,6 +11,7 @@ namespace Microsoft.Maui.Handlers
 		public static void MapCornerRadius(IButtonHandler handler, IButtonStroke buttonStroke) { }
 		public static void MapText(IButtonHandler handler, IText button) { }
 		public static void MapTextColor(IButtonHandler handler, ITextStyle button) { }
+		public static void MapTextAlignment(IButtonHandler handler, ITextAlignment button) { }
 		public static void MapCharacterSpacing(IButtonHandler handler, ITextStyle button) { }
 		public static void MapFont(IButtonHandler handler, ITextStyle button) { }
 		public static void MapPadding(IButtonHandler handler, IButton button) { }
